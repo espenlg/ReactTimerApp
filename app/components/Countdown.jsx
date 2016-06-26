@@ -4,7 +4,7 @@ var Countdown = React.createClass({
   render: function () {
     return (
       <div>
-        <h1>Countdown.jsx</h1>
+        <h3>Countdown.jsx</h3>
       </div>
     )
   }

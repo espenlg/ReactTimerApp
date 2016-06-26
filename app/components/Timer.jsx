@@ -4,7 +4,7 @@ var Timer = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Timer.jsx</h1>
+        <h3>Timer.jsx</h3>
       </div>
     )
   }

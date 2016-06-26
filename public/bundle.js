@@ -25461,7 +25461,7 @@
 	      'div',
 	      null,
 	      React.createElement(
-	        'h1',
+	        'h3',
 	        null,
 	        'Timer.jsx'
 	      )
@@ -25487,7 +25487,7 @@
 	      'div',
 	      null,
 	      React.createElement(
-	        'h1',
+	        'h3',
 	        null,
 	        'Countdown.jsx'
 	      )
