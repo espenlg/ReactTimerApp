@@ -25478,6 +25478,7 @@
 	'use strict';
 
 	var React = __webpack_require__(8);
+	var Clock = __webpack_require__(238);
 
 	var Countdown = React.createClass({
 	  displayName: 'Countdown',
@@ -25486,11 +25487,7 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(
-	        'h3',
-	        null,
-	        'Countdown.jsx'
-	      )
+	      React.createElement(Clock, { totalSeconds: 129 })
 	    );
 	  }
 	});
@@ -25880,10 +25877,54 @@
 
 
 	// module
-	exports.push([module.id, ".top-bar, .top-bar ul {\n  background: #333333; }\n\n.top-bar .menu-text {\n  color: #ffffff; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background: #333333; }\n\n.top-bar .menu-text {\n  color: #ffffff; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n\n.clock {\n  align-items: center;\n  background-color: #B5D0E2;\n  border: 2px solid #2099E8;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: #ffffff;\n  font-size: 2.25rem;\n  font-weight: 300; }\n", ""]);
 
 	// exports
 
+
+/***/ },
+/* 238 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(8);
+
+	var Clock = React.createClass({
+	  displayName: 'Clock',
+
+
+	  getDefaultProps: function getDefaultProps() {
+	    totalSeconds: 0;
+	  },
+
+	  propTypes: {
+	    totalSeconds: React.PropTypes.number
+	  },
+
+	  formatSeconds: function formatSeconds(totalSeconds) {
+	    var seconds = (totalSeconds % 60).toString();
+	    var minutes = Math.floor(totalSeconds / 60).toString();
+	    return ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
+	  },
+
+	  render: function render() {
+	    var totalSeconds = this.props.totalSeconds;
+
+
+	    return React.createElement(
+	      'div',
+	      { className: 'clock' },
+	      React.createElement(
+	        'span',
+	        { className: 'clock-text' },
+	        this.formatSeconds(totalSeconds)
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Clock;
 
 /***/ }
 /******/ ]);
