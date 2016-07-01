@@ -20,7 +20,7 @@ var Navigation = () => {
       <div className='top-bar-right'>
         <ul className='menu'>
           <li className='menu-text'>
-            Created by <a href='#' target='_blank'>Espen</a>
+            Created by <a href='https://github.com/espenlg/ReactTimerApp' target='_blank'>Espen</a>
           </li>
         </ul>
       </div>
